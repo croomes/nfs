@@ -27,7 +27,7 @@ COPY --from=build /go/src/github.com/storageos/nfs/build/_output/bin/nfs /nfs
 COPY --from=build /go/src/github.com/storageos/nfs/export.conf /export.conf
 
 # NFS port and http daemon
-EXPOSE 2049 9587
+EXPOSE 2049 80
 
 # Start Ganesha NFS daemon by default
 CMD ["/nfs"]

@@ -45,7 +45,7 @@ file.
 | Variable Name             | Valid in versions | Description |
 | :------------------       | :---------------- | :---------- |
 | `GANESHA_CONFIGFILE`      | 1.0+              | (REQUIRED) Path to a valid [nfs-ganesha](http://github.com/nfs-ganesha/nfs-ganesha/) configuration file |
-| `LISTEN_ADDR`             | 1.0+              | HTTP server listen address. Default `:9587` |
+| `LISTEN_ADDR`             | 1.0+              | HTTP server listen address. Default `:80` |
 | `DISABLE_METRICS`         | 1.0+              | Disables the /metrics endpoint if set to `true`. Default `false` |
 | `NAME`                    | 1.0+              | Name of the NFS server.  Corresponds to the RWX volume name.  Used to label Prometheus metrics. |
 | `NAMESPACE`               | 1.0+              | Namespace of the NFS server. Used to label Prometheus metrics. |

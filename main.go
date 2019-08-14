@@ -39,7 +39,7 @@ func main() {
 
 	listenAddr := os.Getenv(listenAddrEnvVar)
 	if listenAddr == "" {
-		listenAddr = ":9587"
+		listenAddr = ":80"
 	}
 
 	dm := os.Getenv(disableMetricsEnvVar)

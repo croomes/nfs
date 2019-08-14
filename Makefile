@@ -26,7 +26,7 @@ clean:
 run:
 	docker run --rm \
 		-p 2049 \
-		-p 9587 \
+		-p 80 \
 		-v /export:/export \
 		--cap-add=SYS_ADMIN \
 		--privileged \
