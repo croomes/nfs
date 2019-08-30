@@ -4,22 +4,9 @@ COPY . /go/src/github.com/storageos/nfs/
 RUN make build
 
 
-FROM ubuntu:bionic
+FROM storageos/nfs-base:20190830-0004
 
 LABEL maintainer="support@storageos.com"
-
-RUN DEBIAN_FRONTEND=noninteractive \
- && apt-get update \
- && apt-get install -y software-properties-common \
- && add-apt-repository ppa:gluster/glusterfs-4.1 \
- && add-apt-repository ppa:nfs-ganesha/libntirpc-1.7 \
- && add-apt-repository ppa:nfs-ganesha/nfs-ganesha-2.7 \
- && apt-get update \
- && apt-get install -y netbase nfs-common dbus nfs-ganesha nfs-ganesha-vfs \
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
- && mkdir -p /export /var/run/dbus \
- && chown messagebus:messagebus /run/dbus
 
 COPY --from=build /go/src/github.com/storageos/nfs/build/_output/bin/nfs /nfs
 
