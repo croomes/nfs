@@ -3,7 +3,6 @@ WORKDIR /go/src/github.com/storageos/nfs/
 COPY . /go/src/github.com/storageos/nfs/
 RUN make build
 
-
 FROM storageos/nfs-base:20190830-0004
 
 LABEL maintainer="support@storageos.com"

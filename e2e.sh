@@ -2,13 +2,7 @@
 
 set -Eeuxo pipefail
 
-prepare_host() {
-    # sudo apt -y update
-    # sudo apt -y install linux-modules-extra-$(uname -r)
-    # sudo mount --make-shared /sys
-    # sudo mount --make-shared /
-    # sudo mount --make-shared /dev
-}
+
 
 run_kind() {
     echo "Download kind binary..."
@@ -36,7 +30,7 @@ run_kind() {
 }
 
 main() {
-    prepare_host
+    #prepare_host
     run_kind
 
     echo "Ready for testing"
